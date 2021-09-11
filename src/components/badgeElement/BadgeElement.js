@@ -3,11 +3,14 @@ import React from 'react';
 /** Styles */
 import './BadgeElement.styles.css';
 
-const BadgeElement = () => {
+const BadgeElement = ({ characterName, characterImage }) => {
   return (
     <div className="badge-container">
-      <p className="badge-container__title">Nombre personaje</p>
-      <button>ver mas</button>
+      <img className="badge-container__img" src={characterImage} alt={characterName} />
+      <div className="badge-container__info">
+        <p className="badge-container__info--title">{characterName}</p>
+        <button className="badge-container__info--button">Ver mas</button>
+      </div>
     </div>
   );
 };

@@ -24,15 +24,14 @@ const CharactersList = () => {
 
   return (
     <div>
-      <p>CharactersList</p>
       <button onClick={getCharacters}>get data</button>
-      {/* {characters.map(x => {
+      {characters.map(x => {
           return (
-            <p>{x.name}</p>
+            // <p>{x.name}</p>
+            <BadgeElement characterName={x.name} characterImage={x.image} />
           )
         }
-      )} */}
-      <BadgeElement />
+      )}
     </div>
   )
 }
