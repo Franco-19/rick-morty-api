@@ -60,3 +60,9 @@
     color: #fff;
     transition: all .3s;
 }
+
+/* @media only screen and (min-width: 992px) {
+  .badge-container {
+    max-width: 200px;
+  }
+} */

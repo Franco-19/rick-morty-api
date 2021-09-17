@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState, useEffect } from 'react';
 
 import BadgeElement from './badgeElement/BadgeElement'
 
@@ -12,19 +12,20 @@ const CharactersList = () => {
     fetch('https://rickandmortyapi.com/api/character')
       .then(data => data.json())
       .then(response => {
-        console.log(response.results)
-        // response.results
-
-        // personajes = await [response.results]
-
         setCharacters(response.results)
-        // console.log(characters)
       })
   }
 
+  useEffect(() => {
+    getCharacters()
+    // return () => {
+    //   cleanup
+    // };
+  }, [characters]);
+
   return (
     <div>
-      <button onClick={getCharacters}>get data</button>
+      {/* <button onClick={getCharacters}>get data</button> */}
       {characters.map(x => {
           return (
             // <p>{x.name}</p>
