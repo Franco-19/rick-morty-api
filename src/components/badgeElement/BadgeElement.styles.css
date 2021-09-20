@@ -45,6 +45,11 @@
     font-weight: 600;
 }
 
+.badge-container__info--status {
+  color: black;
+  
+}
+
 .badge-container__info--button {
     background-color: #fff;
     border: none;

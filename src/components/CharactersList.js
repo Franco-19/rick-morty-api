@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 
 import BadgeElement from './badgeElement/BadgeElement'
 
+import './CharactersList.styles.css'
+
 const CharactersList = () => {
 
   const [characters, setCharacters] = useState([])
@@ -24,12 +26,12 @@ const CharactersList = () => {
   }, [characters]);
 
   return (
-    <div>
+    <div className="characters_container">
       {/* <button onClick={getCharacters}>get data</button> */}
       {characters.map(x => {
           return (
             // <p>{x.name}</p>
-            <BadgeElement characterName={x.name} characterImage={x.image} />
+            <BadgeElement characterName={x.name} characterImage={x.image} characterStatus={x.status}/>
           )
         }
       )}
